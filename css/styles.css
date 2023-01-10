@@ -215,7 +215,7 @@ body {
   align-items: center;
   position: relative;
   top: -60px;
-  right: -40%;
+  left: 40%;
 }
 .profile-card__badge {
   flex-basis: 16px;
@@ -320,4 +320,10 @@ body {
 .user-information__input-message::placeholder {
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+  .profile-card__badges {
+    left: 35%;
+  }
 }
