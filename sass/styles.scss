@@ -1,0 +1,197 @@
+@use 'reset';
+
+:root {
+	--bg-primary: #292b2f;
+	--bg-secundary: #18191c;
+	--color-primary: #e3e3e3;
+	--color-secundary: #4f5053;
+	--blue: #5865f2;
+	--green: #3ba55c;
+}
+
+body {
+	width: 100%;
+	background: #181818;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-card {
+	width: 90%;
+	max-width: 400px;
+	background: var(--bg-primary);
+	border-radius: 20px;
+	overflow: hidden;
+	&__banner {
+		width: 100%;
+		height: 100px;
+		overflow: hidden;
+	}
+	&__img-banner {
+		width: 100%;
+	}
+	&__avatar {
+		width: 100px;
+		padding: 5px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		transform: translate(10px, -60px);
+		background: var(--bg-primary);
+		border-radius: 50%;
+	}
+	&__img-avatar {
+		width: 100%;
+		border-radius: 50%;
+	}
+	&__text-avatar {
+		position: absolute;
+		background: rgba(10, 10, 10, 0.4);
+		width: 5.63rem;
+		height: 5.63rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.8rem;
+		color: #fff;
+		font-weight: 700;
+		opacity: 0;
+		transition: opacity ease 0.2s;
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&__status {
+		position: absolute;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 50%;
+		background: var(--bg-primary);
+		padding: 5px;
+		overflow: hidden;
+		transform: translate(130%, 130%);
+	}
+	&__icon-status {
+		background: var(--green);
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+	&__badges {
+		display: inline-flex;
+		background: var(--bg-secundary);
+		padding: 5px 10px;
+		border-radius: 5px;
+		gap: 10px;
+		width: 120px;
+		align-items: center;
+		position: relative;
+		top: -60px;
+		right: -150px;
+	}
+	&__badge {
+		flex-basis: 16px;
+	}
+}
+
+.user-information {
+	width: 90%;
+	margin: auto;
+	position: relative;
+	top: -20px;
+	background: var(--bg-secundary);
+	border-radius: 10px;
+	color: var(--color-primary);
+	padding: 20px;
+	&__username-alias {
+		padding: 10px;
+		border-bottom: 1px solid var(--color-secundary);
+	}
+	&__alias {
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+	&__username {
+		font-size: 0.8rem;
+		color: var(--color-secundary);
+	}
+	&__wrap-scroll {
+		width: 100%;
+		overflow: auto;
+		height: 200px;
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: var(--color-secundary);
+			border-radius: 4px;
+		}
+	}
+	&__h3 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__about-me {
+		padding: 10px;
+	}
+	&__member-from {
+		padding: 10px;
+	}
+	&__dates {
+		display: flex;
+		gap: 10px;
+		margin-top: 5px;
+	}
+	&__icon {
+		width: 1.8rem;
+		height: 1.8rem;
+		img {
+			border-radius: 50%;
+		}
+	}
+	&__roles {
+		padding: 10px;
+	}
+	&__rol {
+		background: var(--bg-primary);
+		border-radius: 3px;
+		padding: 0 5px;
+		cursor: pointer;
+	}
+	&__note {
+		padding: 10px;
+	}
+	&__p--note {
+		font-size: 0.8rem;
+		color: var(--color-secundary);
+		width: 90%;
+		margin: auto;
+		cursor: pointer;
+	}
+	&__message {
+		padding: 10px;
+		width: 100%;
+	}
+	&__input-message {
+		width: 100%;
+		font-size: 1rem;
+		border: 1px solid var(--color-secundary);
+		padding: 10px;
+		border-radius: 5px;
+		outline: none;
+		&::placeholder {
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
+	}
+}
